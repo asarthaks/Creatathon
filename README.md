@@ -5,13 +5,13 @@ Hello Guys, We have created a Telegram bot which can help in detecting the Fake 
 ## Team members 
 Abhishek Singh (abhishek2239)
 
-#Demo Video :
+## Demo Video :
 
 https://www.youtube.com/watch?v=Ixhg78dcybI
 
 https://www.youtube.com/watch?v=v2lndO7pGIc
 
-#Future Improvements
+## Future Improvements
 
 We can make a web scarapper that can scrape news from various websites and we can constantly improve our data and hence we can train our model even better.
 
