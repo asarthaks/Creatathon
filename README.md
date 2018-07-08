@@ -10,3 +10,9 @@ Abhishek Singh (abhishek2239)
 https://www.youtube.com/watch?v=Ixhg78dcybI
 
 https://www.youtube.com/watch?v=v2lndO7pGIc
+
+#Future Improvements
+
+We can make a web scarapper that can scrape news from various websites and we can constantly improve our data and hence we can train our model even better.
+
+We can also implement this on Neural Network to increase accuracy and make our App/Bot even more accurate.
