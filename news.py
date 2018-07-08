@@ -36,11 +36,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, rand
 #from sklearn.naive_bayes import GaussianNB
 #classifier = GaussianNB()
 
-#from sklearn.ensemble import RandomForestClassifier
-#classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 
-from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0)
+#from sklearn.svm import SVC
+#classifier = SVC(kernel = 'rbf', random_state = 0)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
@@ -51,4 +51,40 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
+
+import pickle
+# Open the file to save as pkl file
+# The wb stands for write and binary
+model_pkl = open("Random_forest_model.pkl", "wb")
+
+# Write to the file (dump the model)
+# Open the file to save as pkl file
+pickle.dump(classifier, model_pkl)
+
+# Close the pickle file
+model_pkl.close()
+
+
+
+
+corp = []
+string = ['hey fake news is good']
+for i in range(1) :
+    news = re.sub('[^a-zA-Z]',' ', string[i])
+    news = news.lower()
+    news = news.split()
+    ps = PorterStemmer()
+    news = [ps.stem(word) for word in news if not word in set(stopwords.words('english'))]
+    news = ' '.join(news)
+    corp.append(news)
+
+    
+from sklearn.feature_extraction.text import CountVectorizer
+cv_t = CountVectorizer()
+y_s = cv.transform(corp).toarray()
+
+
+
+
+
 
